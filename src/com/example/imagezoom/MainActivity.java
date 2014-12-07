@@ -144,6 +144,7 @@ public class MainActivity extends Activity {
         int inSampleSize = 1;
         if (tempScale <= 2.75) // you can map scale with quality better than this.
         	inSampleSize = 2;
+
         bounds.inSampleSize = inSampleSize; // takes binary steps only. 1, 2, 4, 8. loaded image part quality
         bm = bitmapRegionDecoder.decodeRegion(pRect, bounds);
 		imageView.setImageBitmap(bm);
